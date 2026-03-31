@@ -43,7 +43,6 @@ playerY++;
 
 function drawPlayer() {
   // TODO: Draw the player on the canvas
-  rect(playerX,playerY)
   fill(COLOR_PLAYER);
   ellipse(playerX, playerY, PLAYER_SIZE * 2);
 }

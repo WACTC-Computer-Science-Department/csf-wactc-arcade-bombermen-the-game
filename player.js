@@ -4,9 +4,9 @@
 // ============================================
 
 // Player variables
-let playerX;
-let playerY;
-let playerLives;
+let playerX=100;
+let playerY=100;
+let playerLives=3;
 
 // TODO: Add any additional player variables you need
 // Examples: playerVelX, playerVelY, playerDirection, etc.
@@ -21,13 +21,29 @@ function resetPlayer() {
 function updatePlayer() {
   // TODO: Move the player based on keyboard input
   // Use keyIsDown(LEFT_ARROW), keyIsDown(RIGHT_ARROW), etc.
+  if (keyIsDown(LEFT_ARROW))
+  {
+playerX--;
+  }
+  if (keyIsDown(RIGHT_ARROW))
+  {
+playerX++;
+  }
+  if (keyIsDown(UP_ARROW))
+  {
+playerY--;
+  }
+  if (keyIsDown(DOWN_ARROW))
+  {
+playerY++;
+  }
   // Or use keyIsDown(65) for 'A', keyIsDown(68) for 'D', etc.
   // Don't forget to keep the player inside the canvas!
 }
 
 function drawPlayer() {
   // TODO: Draw the player on the canvas
-  // Use fill(), ellipse(), rect(), or any p5.js shape
+  rect(playerX,playerY)
   fill(COLOR_PLAYER);
   ellipse(playerX, playerY, PLAYER_SIZE * 2);
 }
